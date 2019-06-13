@@ -1,0 +1,3935 @@
+<!doctype html>
+<html ⚡ lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Maxpress Connecta - Registre-se</title>
+    <link rel="canonical" href="./regular-html-version.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style amp-custom>
+:root {
+  --techColor: 255,118,117;
+  --economiaColor: 116,183,255;
+  --saudeColor: 0,179,143;
+  --comportamentoColor: 245,168,0;
+  --lancamentoColor: 108,92,229;
+  --eventosColor: 147,173,190;
+  --artigosColor: 33,72,104;
+  --tituloFontSize: 30px;
+  --linhaFinaSize: 23px;
+  --textFontSize: 18px;
+  --defaultGreenColor: #00B692;
+  --defaultLightColor: #F0EFED;
+  --defaultDarkColor: #354A54;
+  --destaquesAlphaColor: 53,74,84;
+}
+
+
+body {
+  background-color: var(--defaultLightColor);
+}
+
+div, header, section, button, a, ul, li, h1, h2, h3, h4, p, input, svg, footer {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  /*letter-spacing: 1.2;*/
+  margin: 0;
+  padding: 0;
+  outline: none;
+  color: var(--defaultDarkColor);
+}
+
+button, a {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+
+
+form button {
+  text-decoration: none;
+  background-color: var(--defaultLightColor);
+}
+
+form button:hover {
+  text-decoration: none;
+  background-color: var(--defaultGreenColor);
+}
+
+input {
+  border: none;
+}
+
+
+
+
+
+/*category colors*/
+.techColor {
+  color: rgb(var(--techColor));
+} 
+
+.economiaColor {
+  color: rgb(var(--economiaColor));
+}
+
+.saudeColor {
+  color: rgb(var(--saudeColor));
+}
+
+.comportamentoColor {
+  color: rgb(var(--comportamentoColor));
+}
+
+.lancamentoColor {
+  color: rgb(var(--lancamentoColor));
+}
+
+.eventosColor {
+  color: rgb(var(--eventosColor));
+}
+
+.artigosColor {
+  color: rgb(var(--artigosColor));
+}
+
+
+.techBGColor {
+  background: rgb(var(--techColor));
+} 
+
+.economiaBGColor {
+  background: rgb(var(--economiaColor));
+}
+
+.saudeBGColor {
+  background: rgb(var(--saudeColor));
+}
+
+.comportamentoBGColor {
+  background: rgb(var(--comportamentoColor));
+}
+
+.lancamentoBGColor {
+  background: rgb(var(--lancamentoColor));
+}
+
+.eventosBGColor {
+  background: rgb(var(--eventosColor));
+}
+
+
+.artigosBGColor {
+  background: rgb(var(--artigosColor));
+}
+
+/*scroll to top*/
+  .scrollToTop {
+    color: #fff;
+    font-size: 1.4em;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #777;
+    z-index: 9999;
+    bottom: 30px;
+    right: 30px;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+  /* we move the anchor down to componsate the fixed header */
+  .target {
+    position: relative;
+  }
+
+  .target-anchor {
+    position: absolute;
+    top: -72px;
+    left: 0;
+  }
+
+  .scrollToTopButton {
+    display: block;
+  }
+
+  .arrowUpSvg {
+    width: 100%;
+    height: 100%;
+  }
+
+
+
+
+
+
+
+body {
+  background-image: linear-gradient( 179.6deg,  rgba(0,77,105,0.4) 5%, rgba(0,77,105,0.3
+    ) 108.4% ), url(img/rocket-launch-67723-1500.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
+
+.fullContainer {
+  /*width: 100vw;*/
+  position: relative;
+  overflow-x: hidden;
+  max-width: 2200px;
+  margin: 0 auto;
+}
+
+.asideTechnology p:hover,
+.asideEconomia p:hover,
+.asideSaude p:hover,
+.asideBlockComportamento p:hover,
+.asideBlockLancamentos p:hover,
+.asideBlockEventos p:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/*header*/
+header {
+  display: grid;
+  grid-template-columns: 200px 1fr 0.2fr 50px;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  padding: 20px;
+  background-color: var(--defaultDarkColor);
+  z-index: 31;
+}
+
+.searchFieldWrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 45px;
+  justify-content: center;
+  order: 2;
+  width: 80%;
+  max-width: 700px;
+  justify-self: center;
+  z-index: 20;
+}
+
+.releasesBtn {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  justify-self: start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--defaultDarkColor);
+  border: 1px solid var(--defaultDarkColor);
+  color: #F1F1E6;
+  transition: 0.3s ease all;
+}
+
+.releasesBtn:hover {
+  background-color: var(--defaultGreenColor);
+  border-color: var(--defaultGreenColor);
+  text-decoration: none;
+}
+
+.releasesBtn svg {
+  height: 20px;
+  margin-right: 6px;
+  fill: #F1F1E6;
+}
+
+.releasesBtn span {
+  font-size: 14px;
+}
+
+#searchInput {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 6px 0 0 6px;
+  font-size: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  justify-self: stretch;
+  z-index: 2;
+}
+
+#searchBtn {
+  height: 39px;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: var(--defaultGreenColor);
+  border-radius: 0 6px 6px 0;
+  transition: 0.3s ease all;
+  z-index: 2;
+}
+
+#searchBtn:hover {
+  background-color: green;
+}
+
+#searchBtn amp-img {
+  height: 25px;
+  width: 25px;
+  margin: 0 10px;
+}
+
+.logoHeader {
+  order: 1;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  order: 1;
+  align-self: center;
+}
+
+.loginWrapper {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  grid-row: 1 / -1;
+  grid-column: 3 / 4;
+  order: 3;
+  z-index: 30;
+}
+
+.loginBtn {
+  display: flex;
+  display: none;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.3s ease all;
+  justify-self: end;
+  background-color: transparent;
+  letter-spacing: 2px;
+}
+
+.loginBtn amp-img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.loginBtn span {
+  color: #fff;
+  line-height: 0;
+}
+
+.loginBtn:hover {
+  background-color: var(--defaultGreenColor);
+  text-decoration: none;
+}
+
+.configBtn{
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease all;
+  border-radius: 6px;
+  margin: 5px;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
+  z-index: 30;
+}
+
+.configBtn amp-img {
+  width: 30px;
+}
+
+.configDropdownWrapper {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #1e3799;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9;
+  top: 90px;
+  right: -9px;
+  line-height: 1.3;
+  transition: 0.5s ease all;
+}
+
+.configDropdownWrapper span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.configDropdownWrapper::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #1e3799;
+  position: absolute;
+  right: 20px;
+  transform: rotate(45deg);
+  top: -10px;
+}
+
+.configBtn:hover {
+  background-color: var(--defaultGreenColor);
+}
+
+.configBtn:hover .configDropdownWrapper {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+
+.logoUsp {
+  grid-column: 4 / 5;
+  grid-row: 1 / -1;
+  order: 4;
+  align-self: start;
+  width: 80%;
+  max-width: 200px;
+  justify-self: center;
+}
+
+.loginDropdownWrapper {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background-color: #1e3799;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1.3;
+  transition: 0.5s ease all;
+}
+
+.loginDropdownWrapper span {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.loginDropdownWrapper::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #1e3799;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  top: -10px;
+}
+
+.loginBtn:hover .loginDropdownWrapper {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+
+.searchResultsWrapper {
+  background-color: #fff;
+  display: grid;
+  grid-auto-flow: row;
+  position: absolute;
+  z-index: 1;
+  padding: 30px 10px 10px 10px;
+  border: 1px solid var(--defaultLightColor);
+  transition: 0.3s ease all;
+  border-radius: 0 0 7px 7px;
+  grid-column: 1 / 2;
+  left: 0;
+  top: 27px;
+  width: 100%;
+  box-shadow: 0 20px 50px 0 rgba(0,0,0,.3);
+}
+
+#searchDialogBox {
+  /*visibility: hidden;*/
+}
+
+.searchResultsLines {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--defaultLightColor);
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.searchResultsLines:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.searchResultsBtn:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+.lastContentTitle {
+  font-size: 14px;
+}
+
+.searchResultName {
+  /*margin-left: 7px;*/
+  white-space: nowrap;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.searchResultsBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--defaultGreenColor);
+  padding: 6px 10px;
+  border-radius: 7px;
+  transition: 0.3s ease all;
+  margin: 10px 0;
+  width: 130px;
+}
+
+.searchResultsBtn:hover {
+  background-color: green;
+}
+
+.searchResultsBtn amp-img,
+.searchResultsLines amp-img {
+  width: 34px;
+}
+
+.searchResultsLines:nth-of-type(3) {
+  border-bottom: none;
+}
+
+.searchResultsLines amp-img:nth-of-type(2) {
+  margin-right: 5px;
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+  justify-self: end;
+}
+
+.searchResultsBtn span {
+  color: #fff;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.searchResultsBtn span:hover {
+  color: #fff;
+}
+
+.lastContentLine {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.lastContentListWrapper {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.lastContentLine button {
+  width: 100%;
+}
+
+.lastContentLineTitle {
+  display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lastContentLine button:hover .lastContentLineTitle {
+  text-decoration: underline;
+}
+
+/*final header*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*filtros header*/
+.totalFiltersContainer {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: auto;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.4);
+  z-index: 2;
+}
+
+.headerFiltersWrapper {
+  display: grid;
+  grid-template-columns: 140px repeat(7, 6vw);
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  grid-gap: 2vw;
+  justify-content: center;
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
+
+.filterItem1Wrapper, .filterItem2Wrapper, .filterItem3Wrapper, .filterItem4Wrapper, .filterItem5Wrapper, .filterItem6Wrapper, .filterItem7Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+}
+
+.filterItem1Wrapper h4, .filterItem2Wrapper h4, .filterItem3Wrapper h4, .filterItem4Wrapper h4, .filterItem5Wrapper h4, .filterItem6Wrapper h4, .filterItem7Wrapper h4  {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*switch btns ############################################ */
+
+
+
+#switch1[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem1 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--techColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem1:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch1:checked + #filterItem1 {
+  background: green;
+}
+
+#switch1:checked + #filterItem1:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem1:active:after {
+  width: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#switch2[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem2 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--economiaColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem2:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch2:checked + #filterItem2 {
+  background: green;
+}
+
+#switch2:checked + #filterItem2:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem2:active:after {
+  width: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+#switch3[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem3 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--saudeColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem3:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch3:checked + #filterItem3 {
+  background: green;
+}
+
+#switch3:checked + #filterItem3:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem3:active:after {
+  width: 34px;
+}
+
+
+
+
+
+
+
+
+#switch4[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem4 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--comportamentoColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem4:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch4:checked + #filterItem4 {
+  background: green;
+}
+
+#switch4:checked + #filterItem4:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem4:active:after {
+  width: 34px;
+}
+
+
+
+
+
+
+
+#switch5[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem5 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--lancamentoColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem5:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch5:checked + #filterItem5 {
+  background: green;
+}
+
+#switch5:checked + #filterItem5:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem5:active:after {
+  width: 34px;
+}
+
+
+
+
+
+
+
+
+#switch6[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem6 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--eventosColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem6:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch6:checked + #filterItem6 {
+  background: green;
+}
+
+#switch6:checked + #filterItem6:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem6:active:after {
+  width: 34px;
+}
+
+
+
+
+
+
+
+#switch7[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#filterItem7 {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: rgb(var(--artigosColor));
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+#filterItem7:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+#switch7:checked + #filterItem7 {
+  background: green;
+}
+
+#switch7:checked + #filterItem7:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+  width: 34px;
+  height: 34px;
+}
+
+#filterItem7:active:after {
+  width: 34px;
+}
+
+
+/*final switch btns ############################################ */
+
+
+
+/*final filtros header*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*content container*/
+.contentContainer {
+background: none;
+  padding: 60px 0;
+  /*width: 100vw;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.jobTypeTitle {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 60px;
+  font-weight: 300;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.registerTypeWrapper {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 60px 0 rgba(5,33,55,.8);
+  border-radius: 10px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: inherit;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+  margin: 10vh auto;
+  grid-column-gap: 30px;
+}
+
+.registerTypeWrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: inherit;
+  box-shadow: inset 0 0 300px rgba(255,255,255,0.9);
+  z-index: 1;
+  filter: blur(15px);
+  margin: -20px;
+}
+
+.registerTypeWrapper button {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  border-radius: 5px;
+  transition: 0.3s ease all;
+}
+
+.registerTypeWrapper button:hover {
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.2);
+}
+
+.registerTypeWrapper button svg {
+  width: 150px;
+  margin: 10px auto 30px auto;
+}
+
+.registerTypeWrapper button span {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.registerWrapper {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  display: none;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 60px 0 rgba(5,33,55,.8);
+  border-radius: 10px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: inherit;
+  z-index: 2;
+  overflow: hidden;
+  position: relative;
+  margin: 10vh auto;
+}
+
+
+.registerWrapperOn {
+  display: flex;
+}
+
+.registerWrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: inherit;
+  box-shadow: inset 0 0 300px rgba(255,255,255,0.9);
+  z-index: 1;
+  filter: blur(15px);
+  margin: -20px;
+}
+
+.registerWrapper button, .registerWrapper input {
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.inputs {
+  width: 100%;
+  margin: 5px;
+  border: none;
+  font-size: 18px;
+  background-color: rgba(255,255,255,0.2);
+  color: #000;
+  /*border-bottom: 2px solid #fff;*/
+  margin-bottom: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.inputs::before {
+  content: "Campo Obrigatório!";
+  position: absolute;
+  font-size: 12px;
+  color: red;
+  font-weight: 400;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: inline-block;
+}
+
+.registerWrapper button {
+  margin-top: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--defaultDarkColor);
+  color: #fff;
+  font-size: 20px;
+  transition: 0.3s ease all;
+  outline: none;
+  border-radius: 7px;
+  box-shadow: 0 0 30px 0 rgba(5,33,55,.4);
+}
+
+.registerWrapper button:hover {
+  background-color: var(--defaultGreenColor);
+}
+
+.registerWrapper span {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  z-index: 3;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.warningDialogBox, .dialogBox {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  width: 90vw;
+  max-width: 600px;
+  background-color: rgb(var(--techColor));
+  color: #fff;
+  padding: 30px;
+  left: 50%;
+  top: 300px;
+  transform: translate(-50%);
+  border-radius: 7px;
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.6);
+}
+
+.dialogBox {
+  background-color: #fff;
+}
+
+.warningWrapper, .dialogBoxWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #fff;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.dialogBoxWrapper span {
+  color: #777;
+}
+
+.WarningCloseBtn, .dialogBoxCloseBtn {
+  position: absolute;
+  display: block;
+  right: 20px;
+  top: 16px;
+}
+
+.warningWrapper * {
+  display: block;
+  flex-grow: 1;
+}
+
+.warningSvg, .checkSvg {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  opacity: 0.6;
+}
+
+.checkSvg path {
+  fill: green;
+}
+
+.closeWarningSvg, .closecheckSvg {
+  width: 15px;
+  opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*quem atende btn*/
+.quemAtendeBtn {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 70px 110px;
+  grid-template-rows: auto;
+  width: 225px;
+  bottom: 150px;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(56,207,191,1) 0%, rgba(10,70,147,1) 90.2% );
+  border-radius: 40px 0 0 10px;
+  transition: 0.2s ease all;
+  pointer-events: auto;
+  padding: 0 0 0 7px;
+  z-index: 800;
+  overflow: hidden;
+  height: 75px;
+}
+
+.quemAtendeBtn > * {
+  transition: 0.2s ease all;  
+}
+
+.quemAtendeBtn:hover {
+  width: 250px;
+}
+
+.quemAtendeSvg1 {
+  opacity: 1;
+}
+
+.quemAtendeSvg2 {
+  opacity: 0;
+  transform: rotate(-180deg) translateY(6px);
+}
+
+.quemAtendeBtn:hover .quemAtendeSvg2 {
+  opacity: 1;
+  transform: rotate(0deg) translateY(6px);
+}
+
+.quemAtendeBtn:hover .quemAtendeSvg1 {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.quemAtendeSvg2, .quemAtendeSvg1 {
+  width: 70px;
+  height: 70px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  overflow: hidden;
+  right: 0;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.quemAtendeBtnText {
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+}
+
+.quemAtendeBtnTitle, .quemAtendeBtnText {
+  color: #eee2df;
+  line-height: 1.3;
+}
+
+.quemAtendeBtnTitle {
+  text-align: right;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*quem atende window*/
+.quemAtendeWindow {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 390px;
+  height: auto;
+  justify-self: center;
+  bottom: 10vh;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 120px 0 rgba(0,0,0,.9);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 999;
+  /*transform-origin: 50% 50%;*/
+  visibility: hidden;
+  margin: 0 auto;
+}
+
+.quemAtendeCloseBtn {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  width: 12px;
+  background-color: transparent;
+}
+
+.quemAtendeCloseSvg {
+  width: 100%;
+}
+
+.quemAtendeWindowCloseBtn {
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  width: 12px;
+  background-color: transparent;
+}
+
+.quemAtendeLead {
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.quemAtendeSearchInputWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  grid-column-gap: 10px;
+  width: 100%;
+}
+
+.quemAtendeSearchInputWrapper:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.quemAtendeSearchInputWrapper:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+.quemAtendeSearchInput {
+  border: 1px solid #eee2df;
+  border-radius: 5px;
+  padding: 10px;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  margin-bottom: 5px;
+}
+
+.quemAtendeSearchInput1 {
+  border: 1px solid #eee2df;
+  border-radius: 5px;
+  padding: 10px;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.quemAtendeSearchBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
+  justify-self: center;
+  border-radius: 6px;
+  transition: 0.3s ease all;
+  background-color: var(--defaultGreenColor);
+}
+
+.quemAtendeSearchBtn:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.quemAtendeResultadoWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee2df;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.quemAtendeImg {
+  border-radius: 50%;
+}
+
+
+.quemAtendeLineText1 {
+  color: #93ADBE;
+}
+
+.quemAtendeLine {
+  align-self: flex-start;
+  margin: 10px auto;
+}
+
+.quemAtendeLine span, .quemAtendeLine a {
+  line-height: 1.5;
+  display: inline-block;
+}
+
+.quemAtendeTagIcon {
+  width: 20px;
+}
+
+.quemAtendeTagLine {
+  display: flex;
+  background-color: rgb(var(--techColor));
+  padding: 6px 10px;
+  border-radius: 5px;
+  align-self: center;
+  margin: 10px;
+  transition: 0.3s ease all;
+}
+
+.quemAtendeTagLine:hover {
+  background-color: green;
+}
+
+.quemAtendeTag {
+  color: #eee2df;
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.atendimentoWrapper {
+  align-self: stretch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*login modal*/
+
+.loginModalBg {
+  position: absolute;
+  display: grid;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,.5);
+  z-index: 999;
+  justify-content: end;
+  align-items: start;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loginModal input {
+  font-size: 18px;
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--defaultDarkColor);
+  margin: 5px auto;
+  border-radius: 5px;
+  color: var(--defaultDarkColor);
+}
+
+.loginModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: #fff;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 120px 0 rgba(0,0,0,.8);
+}
+
+.loginModal a:hover {
+  text-decoration: underline;
+}
+
+.loginModal span {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.loginEntrarBtn {
+  margin: 10px auto;
+  color: #fff;
+  background-color: var(--defaultGreenColor);
+  padding: 10px;
+  border-radius: 4px;
+  transition: 0.3s ease all;
+}
+
+.loginEntrarBtn:hover {
+  background-color: green;
+}
+
+.loginModalCloseBtn {
+  background-color: transparent;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.loginModalCloseSvg {
+  width: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer {
+  background-color: var(--defaultDarkColor);
+}
+
+.footerContainer {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: auto auto auto;
+  padding: 50px 50px 30px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 20px;
+}
+
+.footerContainer ul:nth-of-type(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  order: 1;
+}
+
+.footerContainer ul:nth-of-type(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  order: 2;
+}
+
+.footerContainer ul li {
+  line-height: 2;
+}
+
+.footerContainer form {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+  order: 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-row-gap: 10px;
+}
+
+.footerContainer form input, .footerContainer form textarea {
+  background-color: rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 18px;
+  /*width: 100%;*/
+  padding: 10px;
+  border-radius: 7px;
+  border: none;
+  resize: none;
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+}
+
+.footerContainer form button {
+  font-size: 18px;
+  justify-self: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s ease all;
+}
+
+.footerContainer form textarea {
+  height: 100px;
+}
+
+.footerContainer p:nth-of-type(1) {
+  grid-column: 1 / 3;
+  order: 4;
+  align-self: center;
+  justify-self: center;
+  max-width: 480px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+
+.footerContainer p:nth-of-type(2) {
+  grid-column: 1 / -1;
+  order: 5;
+  margin-top: 20px;
+  border-top: 2px solid rgba(255,255,255,0.2);
+  padding-top: 20px;
+  letter-spacing: 1.2px;
+}
+
+.footerContainer ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footerContainer ul li a {
+  color: #fff;
+  display: inline-block;
+}
+
+.footerContainer ul li svg {
+  color: #fff;
+  display: inline-block;
+  opacity: 0.7;
+}
+
+
+.footerContainer p {
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*keyframes*/
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    right: -110%;
+  }
+
+  to {
+    opacity: 1;
+    right: 180px;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    right: -110%;
+  }
+
+  to {
+    opacity: 1;
+    right: 180px;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+
+}
+
+#animLine1, #animLine2 {
+  /*position: relative;*/
+  animation-name: animeLinesA;
+  animation-duration: 1s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+  mask: url(#linesClip);
+}
+
+@keyframes animeLinesA {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 300px;
+  }
+}
+
+
+@keyframes Gradient {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    right: 180px;
+  }
+
+  to {
+    opacity: 0;
+    right: -110%;
+  }
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+    right: 180px;
+  }
+
+  to {
+    opacity: 0;
+    right: -110%;
+  }
+}
+
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .destaquesWrapper {
+    grid-template-columns: auto 0.7fr 1fr 300px;
+    grid-template-rows: auto 240px 240px;
+    grid-gap: 15px;
+  }
+
+  .filterItem1Wrapper,
+  .filterItem2Wrapper,
+  .filterItem3Wrapper,
+  .filterItem4Wrapper,
+  .filterItem5Wrapper,
+  .filterItem6Wrapper,
+  .filterItem7Wrapper {
+    transform: scale(0.6);
+  }
+
+  .headerFiltersWrapper {
+    grid-template-columns: 100px repeat(7, 7vw);
+  }
+
+  .searchFieldWrapper {
+    grid-column: 2 / 3;
+  }
+
+  .releasesBtn {
+    width: 180px;
+  }
+
+  .releasesBtn svg {
+    width: 30px;
+  }
+
+  .releasesBtn span {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .totalFiltersContainer {
+      grid-template-columns: 1fr 200px;
+  }
+
+  .headerFiltersWrapper {
+      display: grid;
+      grid-template-columns: 120px repeat(7, 7vw);
+  }
+
+  .filterItem1Wrapper,
+  .filterItem2Wrapper,
+  .filterItem3Wrapper,
+  .filterItem4Wrapper,
+  .filterItem5Wrapper,
+  .filterItem6Wrapper,
+  .filterItem7Wrapper {
+    transform: scale(0.6);
+  }
+
+  .headerFiltersWrapper {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .searchFieldWrapper {
+    grid-column: 2 / 3;
+  }
+
+  .quemAtendeBtn {
+    transform: scale(0.7);
+    transform-origin: center right;
+  }
+
+  .releasesBtn {
+    width: 170px;
+    margin: 0 auto;
+  }
+
+  .releasesBtn span {
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .quemAtendeBtn {
+    transform: scale(0.7);
+    transform-origin: center right;
+  }
+
+  .searchFieldWrapper {
+    position: absolute;
+    width: 80vw;
+    grid-column: 1 / -1;
+    justify-self: center;
+    top: 100px;
+  }
+
+  .releasesBtn {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0 auto;
+  }
+
+  #searchInput {
+    background-color: #eee2df;
+  }
+
+  .searchResultsWrapper {
+    top: 20px;
+  }
+
+  .logoUsp {
+    grid-column: 4 / -1;
+  }
+
+  .loginWrapper {
+    grid-column: 3 / 4;
+  }
+
+  header {
+    margin-bottom: 90px;
+    grid-template-columns: 200px 1fr 1fr 50px;
+  }
+
+  .totalFiltersContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    box-shadow: none;
+  }
+
+  .headerFiltersWrapper {
+      display: grid;
+      grid-template-columns: repeat(7, 9vw);
+      grid-template-rows: auto auto;
+      grid-auto-flow: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      grid-column-gap: 30px;
+      grid-row-gap: 5px;
+      justify-content: center;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+  }
+
+  .headerFiltersWrapper h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .filterItem1Wrapper,
+  .filterItem2Wrapper,
+  .filterItem3Wrapper,
+  .filterItem4Wrapper,
+  .filterItem5Wrapper,
+  .filterItem6Wrapper,
+  .filterItem7Wrapper {
+    transform: scale(0.6);
+  }
+
+  .headerFiltersWrapper {
+    font-size: 18px;
+  }
+
+  .footerContainer {
+    padding: 20px;
+  }
+
+  .footerContainer ul:nth-of-type(1) {
+    grid-column: 1 / 3;
+  }
+
+  .footerContainer p:nth-of-type(1) {
+    text-align: justify;
+  }
+
+  .footerContainer form {
+    grid-column: 3 / -1;
+    grid-row: 1 / 4;
+  }
+
+  .footerContainer form textarea {
+    height: 200px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .searchFieldWrapper {
+    position: absolute;
+    width: 80vw;
+    grid-column: 1 / -1;
+    justify-self: center;
+    top: 110px;
+  }
+
+  .searchResultsLines span {
+    width: 100px;
+  }
+
+
+  #searchInput {
+    background-color: #F1F1E6;
+  }
+
+  .searchResultsWrapper {
+    top: 20px;
+    grid-column: 1 / -1;
+  }
+
+  .logoHeader {
+    width: 130px;
+  }
+
+  .loginWrapper {
+    grid-column: 3 / 4;
+  }
+
+  header {
+    margin-bottom: 120px;
+    grid-template-columns: 100px 1fr 1fr 50px;
+  }
+
+  .totalFiltersContainer {
+    box-shadow: none;
+  }
+
+  .headerFiltersWrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 10vw);
+      grid-template-rows: auto auto auto;
+      grid-auto-flow: column;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      grid-column-gap: 30px;
+      grid-row-gap: 5px;
+      justify-content: space-around;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+  }
+
+  .headerFiltersWrapper h3 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .releasesBtn {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0 auto;
+  }
+
+  .filterItem1Wrapper,
+  .filterItem2Wrapper,
+  .filterItem3Wrapper,
+  .filterItem4Wrapper,
+  .filterItem5Wrapper,
+  .filterItem6Wrapper,
+  .filterItem7Wrapper {
+    transform: scale(0.7);
+  }
+
+  .quemAtendeWindow {
+      width: 350px;
+  }
+
+  .quemAtendeBtn {
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg) scale(0.8);
+    border-radius: 30px 15px 0 0;
+    right: -110px;
+    padding-bottom: 170px;
+  }
+
+  .quemAtendeBtnTitle {
+    align-self: center;
+    top: 30px;
+  }
+
+  .registerWrapper {
+    width: 90%;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-auto-rows: auto;
+    padding: 40px 20px;
+  }
+
+  .footerContainer ul:nth-of-type(1) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+
+  .footerContainer ul:nth-of-type(2) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  .footerContainer form {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    margin: 30px 0;
+  }
+
+  .footerContainer form textarea {
+    height: 100px;
+  }
+
+  .footerContainer p:nth-of-type(1) {
+    grid-row: 4 / 5;
+    text-align: justify;
+    grid-column: 1 / -1;
+  }
+
+  .footerContainer p:nth-of-type(2) {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 399px) {
+  .searchFieldWrapper {
+    position: relative;
+    width: 80vw;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    justify-self: center;
+  }
+
+  .releasesBtn {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0 auto 20px auto;
+  }
+
+  .logoHeader {
+    width: 70%;
+    margin: 0 auto;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  #searchInput {
+    background-color: #F1F1E6;
+  }
+
+  .searchResultsWrapper {
+    top: 20px;
+    grid-column: 1 / -1;
+  }
+
+  .searchFieldWrapper {
+    position: absolute;
+    width: 80vw;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .searchResultsLines amp-img:nth-of-type(2) {
+    display: none;
+  }
+
+  .loginModal {
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    margin-top: 30px;
+    position: absolute;
+    width: 90%;
+  }
+
+  .loginWrapper {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .configBtn {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  header {
+    margin-bottom: 20px;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 50px;
+    grid-row-gap: 30px;
+  }
+
+  .headerFiltersWrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 10vw);
+      grid-template-rows: auto auto auto;
+      grid-auto-flow: dense;
+      align-items: center;
+      background-color: #fff;
+      padding: 20px;
+      grid-column-gap: 10px !important;
+      grid-row-gap: 20px;
+      justify-content: space-around;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+  }
+
+  .headerFiltersWrapper h3 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    text-align: center;
+  }
+
+  .totalFiltersContainer {
+    box-shadow: none;
+  }
+
+  .filterItem1Wrapper,
+  .filterItem2Wrapper,
+  .filterItem3Wrapper,
+  .filterItem4Wrapper,
+  .filterItem5Wrapper,
+  .filterItem6Wrapper,
+  .filterItem7Wrapper {
+    transform: scale(0.7);
+  }
+
+  .filterItem1Wrapper h4,
+  .filterItem2Wrapper h4,
+  .filterItem3Wrapper h4,
+  .filterItem4Wrapper h4,
+  .filterItem5Wrapper h4,
+  .filterItem6Wrapper h4,
+  .filterItem7Wrapper h4 {
+      margin-bottom: 3px;
+      font-weight: 500;
+  }
+
+  .quemAtendeWindow {
+      width: 90%;
+      padding: 10px;
+  }
+
+  .quemAtendeBtn {
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg) scale(0.7);
+    border-radius: 30px 15px 0 0;
+    right: -115px;
+    padding-bottom: 170px;
+  }
+
+  .quemAtendeBtnTitle {
+    align-self: center;
+    top: 30px;
+  }
+
+  .quemAtendeLead {
+    font-size: 12px;
+    margin: 20px auto 5px auto;
+  }
+
+  .quemAtendeResultadoWrapper .quemAtendeLead {
+    font-size: 12px;
+    margin: 0 auto 5px auto;
+  }
+
+  .registerWrapper {
+    width: 90%;
+  }
+
+  .jobTypeTitle {
+    font-size: 30px;
+    margin-top: 60px;
+  }
+
+  .registerTypeWrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    margin-top: 50px;
+    padding: 10px;
+    grid-gap: 20px;
+  }
+
+  .registerTypeWrapper button span {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #777;
+  }
+
+  .registerTypeWrapper button svg {
+      width: 100px;
+      margin: 10px auto;
+  }
+
+  .footerContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-auto-rows: auto;
+    padding: 40px 20px;
+  }
+
+  .footerContainer ul:nth-of-type(1) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+
+  .footerContainer ul:nth-of-type(2) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  .footerContainer form {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    margin: 30px 0;
+  }
+
+  .footerContainer form textarea {
+    height: 100px;
+  }
+
+  .footerContainer p:nth-of-type(1) {
+    grid-row: 4 / 5;
+    text-align: justify;
+    grid-column: 1 / -1;
+  }
+
+  .footerContainer p:nth-of-type(2) {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+  }
+}
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--     <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Article headline",
+      "image": [
+        "thumbnail1.jpg"
+      ],
+      "datePublished": "2015-02-05T08:00:00+08:00"
+    }
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"  href="img/favicon/favicon512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#354A54">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#354A54">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--     <link rel="stylesheet" type="text/css" href="css/registrar.css">
+    <link rel="stylesheet" type="text/css" href="css/registrarMediaQueries.css"> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+
+  <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- scroll to top ref -->
+
+  <a class="target-anchor"
+    id="top"></a>
+
+<!-- final scroll to top ref -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+<svg class="logoHeader" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+y="0px" viewBox="0 0 258.6 69.5" xml:space="preserve">
+  <g id="lines">
+    <path fill="#FFFFFF" d="M133.9,22.2c-1.2,0-2.3,0.8-2.7,1.9H5.5c-0.4-1.1-1.4-1.9-2.7-1.9c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9c1.2,0,2.3-0.8,2.7-1.9h125.6c0.4,1.1,1.4,1.9,2.7,1.9c1.6,0,2.9-1.3,2.9-2.9C136.7,23.5,135.4,22.2,133.9,22.2z"/>
+    <path fill="#FFFFFF" d="M255.7,30.9c-1.2,0-2.3,0.8-2.7,1.9h-205c-0.4-1-1.4-1.7-2.6-1.7c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9c1.3,0,2.4-0.9,2.7-2H253c0.4,1.1,1.4,1.9,2.7,1.9c1.6,0,2.9-1.3,2.9-2.9S257.3,30.9,255.7,30.9z"/>
+  </g>
+  <defs>
+    <mask id="linesClip" class="filled-lines">
+        <path fill="#777" d="M133.9,22.2c-1.2,0-2.3,0.8-2.7,1.9H5.5c-0.4-1.1-1.4-1.9-2.7-1.9c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9c1.2,0,2.3-0.8,2.7-1.9h125.6c0.4,1.1,1.4,1.9,2.7,1.9c1.6,0,2.9-1.3,2.9-2.9C136.7,23.5,135.4,22.2,133.9,22.2z"/>
+        <path fill="#777" d="M255.7,30.9c-1.2,0-2.3,0.8-2.7,1.9h-205c-0.4-1-1.4-1.7-2.6-1.7c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9c1.3,0,2.4-0.9,2.7-2H253c0.4,1.1,1.4,1.9,2.7,1.9c1.6,0,2.9-1.3,2.9-2.9S257.3,30.9,255.7,30.9z"/>
+    </mask>
+  </defs>
+<!--   <rect id="animLine1" x="30" y="-70" width="20" height="100" fill="#9c6"/>
+  <rect id="animLine2" x="-25" y="-70" width="50" height="100" fill="#9c6"/>
+  <rect id="animLine3" x="-25" y="30" width="50" height="100" fill="#9c6"/>
+  <rect id="animLine4" x="40" y="30" width="50" height="100" fill="#9c6"/> -->
+  <g id="connecta">
+    <path fill="#FFFFFF" d="M23.9,16.6c0.1,1,1,1.6,1.9,1.6h0.4v0.3h-5.6v-0.2H21c0.6,0,1.1-0.5,1-1.1L20.8,4.2l-5.4,12c0,0-0.7,1.6-0.9,2.6h-0.2L7.7,4.6L6.6,17.1c0,0.6,0.4,1.1,1,1.1H8v0.2H3v-0.3h0.4c0.9,0,1.7-0.6,1.9-1.6L7.2,0.1h0.2l7.2,15.5l7-15.5h0.2L23.9,16.6z"/>
+    <path fill="#FFFFFF" d="M42.7,16.6c0.5,1.1,1.5,1.6,2.3,1.6h0.2v0.3h-5.8v-0.3h0.2c0.7,0,1.4-0.6,1-1.6l-1.6-4.4H32l-1.7,4.4c-0.4,1,0.3,1.6,1,1.6h0.2v0.3h-5.2v-0.3h0.2c0.8,0,1.7-0.5,2.3-1.6l5.8-13.8c0,0,1-2.1,1-2.6h0.2L42.7,16.6z M38.6,11.4l-3.1-8.3l-3.2,8.3H38.6z"/>
+    <path fill="#FFFFFF" d="M62.2,18.2v0.3h-6.3v-0.3h0.3c0.7,0,1.3-0.8,0.9-1.6l-4-6.3l-4,6.2c-0.4,0.7,0.2,1.6,0.9,1.6h0.3v0.3h-5.8v-0.3H45c1.1,0,2.1-0.7,2.6-1.5l4.9-7.3L48,2.2c-0.5-0.8-1.5-1.5-2.6-1.5h-0.4V0.5h6.2v0.3H51c-0.7,0-1.3,0.8-0.9,1.6l3.5,5.6l3.5-5.5c0.4-0.7-0.2-1.6-0.9-1.6h-0.3V0.5h5.8v0.3h-0.4c-1.1,0-2,0.7-2.6,1.5l-4.5,6.6l5,7.8c0.5,0.8,1.5,1.5,2.6,1.5H62.2z"/>
+    <path fill="#FFFFFF" d="M70.2,0.5c3.3,0,5.3,1.9,5.3,5c0,3.9-4.3,6-7.5,4.3l0-0.2c0,0,4.2,0.9,5.4-2.8c0.1-0.4,0.2-1,0.2-1.6c-0.1-2.4-1.3-3.9-3.5-3.9h-3v15.4c0,0.9,0.7,1.6,1.6,1.6h0.3l0,0.3h-5.6l0-0.3h0.3c0.9,0,1.6-0.7,1.6-1.6V2.2c-0.1-0.8-0.8-1.5-1.6-1.5h-0.3l0-0.3L70.2,0.5z"/>
+    <path fill="#FFFFFF" d="M85.1,0.5c3.1,0,5,1.8,5,4.8c0,2.5-1.9,4.9-4.4,4.9c0.6,0.3,1.3,1.1,1.8,1.8c0,0,2.2,3.2,3.2,4.3c1,1.1,2,1.9,3.5,1.9v0.3h-1.4c-2.4,0-3.7-1.3-4.5-2.3c-0.3-0.3-3.2-4.6-3.4-4.8c-0.7-0.8-1.4-1.7-2.4-1.7V9.4c0,0,0.6,0,1.4,0c1.3,0,3.3-0.4,4-2.7c0.1-0.4,0.2-1,0.2-1.5c-0.1-2.3-1.3-3.8-3.2-3.9c-1.3-0.1-2.9,0-3.2,0v15.3c0,0.9,0.7,1.6,1.6,1.6h0.3l0,0.3h-5.6l0-0.3h0.3c0.9,0,1.6-0.7,1.6-1.6V2.3c0-0.9-0.7-1.6-1.6-1.6h-0.3l0-0.3L85.1,0.5z"/>
+    <path fill="#FFFFFF" d="M105.5,18.5H94.8l0-0.3h0.3c0.9,0,1.6-0.7,1.6-1.6V2.2c-0.1-0.8-0.8-1.5-1.6-1.5h-0.3l0-0.3h7.5c1.1,0,2.6-0.3,3.1-0.5v0.8v0.4v2.1l-0.3,0V2.8c0-0.8-0.6-1.5-1.4-1.5h-5.2v8h4.3c0.7,0,1.2-0.6,1.2-1.3V7.6l0.3,0v4.1l-0.3,0v-0.4c0-0.7-0.5-1.2-1.2-1.3h-4.4v7.7h3.7c2.7,0,3.8-1.4,4.6-3.4h0.3L105.5,18.5z"/>
+    <path fill="#FFFFFF" d="M117.6,10.9c1,0.9,1.3,2.1,1.3,3.1c0,2.8-1.9,4.8-4.8,4.8c-1.3,0-3.3-0.4-4.4-1.4c-0.2-0.8-0.1-2.4,0.3-3.6h0.2c-0.3,2.7,1.4,4.3,3.7,4.2c1.9-0.1,3.4-1.4,3.4-3.4c0-1-0.4-1.8-1-2.4l-4.9-4.6c-1-0.9-1.4-2.2-1.4-3.2c0-2.2,1.6-4.3,4.5-4.3c0.7,0,1.5,0.1,2.2,0.3h1v0.3v2.9h-0.2c0-1.6-1.3-2.6-2.9-2.6c-1.9,0-3.2,1.4-3.2,3c0,0.7,0.2,1.6,1,2.4L117.6,10.9z"/>
+    <path fill="#FFFFFF" d="M129.8,10.9c1,0.9,1.3,2.1,1.3,3.1c0,2.8-1.9,4.8-4.8,4.8c-1.3,0-3.3-0.4-4.4-1.4c-0.2-0.8-0.1-2.4,0.3-3.6h0.2c-0.3,2.7,1.4,4.3,3.7,4.2c1.9-0.1,3.4-1.4,3.4-3.4c0-1-0.4-1.8-1-2.4l-4.9-4.6c-1-0.9-1.4-2.2-1.4-3.2c0-2.2,1.6-4.3,4.5-4.3c0.7,0,1.5,0.1,2.2,0.3h1v0.3v2.9h-0.2c0-1.6-1.3-2.6-2.9-2.6c-1.9,0-3.2,1.4-3.2,3c0,0.7,0.2,1.6,1,2.4L129.8,10.9z"/>
+  </g>
+  <g id="maxpress">
+    <path fill="#FFFFFF" d="M34.3,65.9c-1,0.5-2,0.9-3,1.4c-1,0.4-2.1,0.8-3.3,1.2c-1.2,0.3-2.4,0.6-3.8,0.8c-1.4,0.2-2.9,0.3-4.5,0.3c-5.2,0-9.2-1.2-12-3.5c-2.8-2.3-4.2-6.2-4.2-11.6c0-3.1,0.5-6.1,1.4-8.8c1-2.8,2.4-5.2,4.3-7.2c1.9-2.1,4.2-3.7,7-4.9c2.8-1.2,6-1.8,9.6-1.8c1.7,0,3.3,0.1,4.7,0.3c1.4,0.2,2.7,0.5,3.8,0.9c1.1,0.4,2.2,0.8,3.1,1.2c0.9,0.4,1.7,0.8,2.5,1.2l-2.1,10.8H27.4c0-0.4,0.1-0.9,0.1-1.5c0.1-0.6,0.1-1.2,0.1-1.9c0-0.6,0.1-1.3,0.1-1.9c0-0.6,0.1-1.1,0.1-1.6c0-0.3,0-0.7-0.1-1.1c0-0.4-0.1-0.8-0.3-1.2c-0.2-0.4-0.4-0.7-0.7-1c-0.3-0.3-0.8-0.4-1.3-0.4c-1,0-1.9,0.4-2.8,1.2c-0.8,0.8-1.6,1.9-2.2,3.3c-0.7,1.4-1.2,2.9-1.7,4.7c-0.5,1.7-0.9,3.5-1.2,5.3c-0.3,1.8-0.6,3.6-0.8,5.3c-0.2,1.7-0.3,3.3-0.3,4.6c0,0.4,0,0.9,0.1,1.4c0,0.6,0.2,1.1,0.3,1.7c0.2,0.5,0.5,1,0.9,1.4c0.4,0.4,1,0.6,1.7,0.6c1.2,0,2.4-0.7,3.5-2.2c1.1-1.5,2.1-4.1,3-8h10.7L34.3,65.9z"/>
+    <path fill="#FFFFFF" d="M56.9,43.5c4.6,0,7.9,0.8,10,2.4c2.2,1.7,3.3,4.5,3.3,8.5c0,2.4-0.4,4.6-1.2,6.6c-0.8,2-2,3.6-3.4,4.8c-2.9,2.5-7.2,3.7-12.8,3.7c-4.8,0-8.2-0.9-10.2-2.7c-2.2-1.9-3.3-4.7-3.3-8.5c0-2.5,0.5-4.8,1.5-6.8c1-2,2.5-3.7,4.4-5.1C48.1,44.4,52,43.5,56.9,43.5z M52.9,65.6c1,0,1.8-0.5,2.5-1.6c0.7-1.1,1.3-2.4,1.7-4c0.4-1.6,0.7-3.2,1-4.9c0.2-1.7,0.3-3.1,0.3-4.4c0-1.1-0.1-1.9-0.3-2.5c-0.2-0.6-0.7-0.8-1.4-0.8c-1,0-1.9,0.6-2.7,1.7c-0.8,1.1-1.4,2.5-1.8,4c-0.5,1.5-0.8,3.1-1,4.8c-0.2,1.6-0.3,2.9-0.3,3.9C50.9,64.3,51.6,65.6,52.9,65.6z"/>
+    <path fill="#FFFFFF" d="M87.5,47.8c0.8-0.8,1.7-1.5,2.7-2.1c0.9-0.5,1.9-1,3.1-1.5c1.2-0.5,2.5-0.7,4-0.7c2,0,3.7,0.5,5,1.5c1.3,1,2,2.4,2,4.2c0,0.5-0.1,1.1-0.2,1.8c-0.1,0.7-0.3,1.5-0.4,2.2c-0.2,0.8-0.3,1.6-0.5,2.3c-0.2,0.8-0.3,1.5-0.4,2.1L100.3,69H88.6l3.2-15.1c0.1-0.5,0.2-1,0.3-1.5c0.1-0.5,0.2-1,0.2-1.4c0-0.6-0.1-1.1-0.4-1.4c-0.3-0.4-0.7-0.6-1.3-0.6c-0.7,0-1.4,0.3-2,0.8c-0.6,0.5-1.1,0.9-1.5,1.3l-3.8,18H71.4l5.3-24.9h9.5l1,3.7H87.5z"/>
+    <path fill="#FFFFFF" d="M121.5,47.8c0.8-0.8,1.7-1.5,2.7-2.1c0.9-0.5,1.9-1,3.1-1.5c1.2-0.5,2.5-0.7,4-0.7c2,0,3.7,0.5,5,1.5c1.3,1,2,2.4,2,4.2c0,0.5-0.1,1.1-0.2,1.8c-0.1,0.7-0.3,1.5-0.4,2.2c-0.2,0.8-0.3,1.6-0.5,2.3c-0.2,0.8-0.3,1.5-0.4,2.1L134.3,69h-11.8l3.2-15.1c0.1-0.5,0.2-1,0.3-1.5c0.1-0.5,0.2-1,0.2-1.4c0-0.6-0.1-1.1-0.4-1.4c-0.3-0.4-0.7-0.6-1.3-0.6c-0.7,0-1.4,0.3-2,0.8c-0.6,0.5-1.1,0.9-1.5,1.3l-3.8,18h-11.8l5.3-24.9h9.5l1,3.7H121.5z"/>
+    <path fill="#FFFFFF" d="M152.5,57.4c-0.2,0.9-0.3,1.7-0.3,2.4c-0.1,0.8-0.1,1.5-0.1,2.1c0,0.3,0,0.7,0.1,1.2c0,0.4,0.1,0.8,0.3,1.2c0.1,0.4,0.3,0.7,0.6,0.9c0.3,0.3,0.6,0.4,1.1,0.4c0.3,0,0.7-0.1,1.2-0.3c0.4-0.2,0.9-0.6,1.3-1c0.4-0.4,0.9-0.9,1.3-1.6c0.4-0.6,0.7-1.3,1-2.1h9.5l-1.5,6.2c-0.8,0.5-1.7,0.9-2.7,1.3c-1,0.3-2.1,0.6-3.2,0.8c-1.1,0.2-2.3,0.4-3.4,0.5c-1.2,0.1-2.3,0.1-3.3,0.1c-1.9,0-3.7-0.2-5.4-0.5c-1.7-0.3-3.1-0.9-4.3-1.8c-1.2-0.8-2.2-2-2.9-3.4c-0.7-1.4-1.1-3.2-1.1-5.2c0-1.9,0.3-3.7,0.9-5.6s1.6-3.4,3-4.8c1.4-1.4,3.3-2.5,5.7-3.4c2.4-0.8,5.3-1.3,8.9-1.3c3.9,0,6.8,0.6,8.7,1.8c2,1.2,2.9,3.1,2.9,5.6c0,1-0.2,2.2-0.5,3.4c-0.3,1.2-0.8,2.3-1.4,3.1H152.5z M160.2,50.5c0-1.2-0.2-2-0.6-2.4c-0.4-0.4-0.9-0.6-1.4-0.6c-0.6,0-1.2,0.2-1.7,0.6c-0.5,0.4-1,0.9-1.4,1.6c-0.4,0.7-0.8,1.5-1.2,2.3s-0.6,1.8-0.9,2.8h6.6c0.1-0.5,0.2-0.9,0.2-1.5c0.1-0.4,0.1-0.9,0.2-1.4C160.2,51.4,160.2,50.9,160.2,50.5z"/>
+    <path fill="#FFFFFF" d="M197.4,67.6c-1.6,0.7-3.3,1.1-5.1,1.4c-1.8,0.3-3.8,0.4-6.1,0.4c-2,0-3.9-0.2-5.5-0.6c-1.7-0.4-3.1-1.1-4.4-1.9c-1.2-0.9-2.2-2-2.9-3.4c-0.7-1.4-1-3.1-1-5.1c0-2.1,0.4-4,1.1-5.8s1.8-3.4,3.2-4.7c1.5-1.4,3.3-2.4,5.5-3.2c2.2-0.8,4.9-1.2,8-1.2c2.5,0,4.7,0.2,6.6,0.6c1.9,0.4,3.4,1.3,4.6,2.8l-1.6,7.4h-7.9c0-0.7,0.1-1.2,0.1-1.7c0-0.5,0.1-1.1,0.1-1.7c0-1.2-0.1-2.1-0.4-2.6c-0.3-0.5-0.7-0.8-1.3-0.8c-1.1,0-2,0.5-2.8,1.6c-0.8,1.1-1.5,2.3-2,3.8c-0.5,1.5-0.9,3.1-1.2,4.7c-0.3,1.6-0.4,3-0.4,4.2c0,0.4,0,0.9,0.1,1.3s0.1,0.9,0.3,1.2c0.1,0.4,0.3,0.7,0.6,0.9c0.2,0.2,0.6,0.3,1,0.3c0.4,0,0.8-0.1,1.3-0.3c0.5-0.2,1-0.6,1.4-1.1c0.5-0.5,0.9-1.1,1.3-1.9c0.4-0.8,0.8-1.7,1-2.8h8.3L197.4,67.6z"/>
+    <path fill="#FFFFFF" d="M204.3,44.1c1.4-0.3,2.7-0.7,3.8-1c1.1-0.4,2.1-0.9,3-1.5c0.9-0.6,1.8-1.3,2.6-2.1c0.8-0.8,1.7-1.9,2.7-3.1h6l-1.7,7.8h4.5l-0.8,3.9h-4.6l-2.4,11.3c-0.2,0.9-0.3,1.7-0.5,2.4c-0.1,0.7-0.2,1.2-0.2,1.6c0,0.8,0.3,1.3,0.8,1.5c0.6,0.2,1.6,0.3,3.2,0.3l-0.9,4c-0.3,0.1-0.7,0.1-1.2,0.2c-0.6,0-1.2,0.1-1.9,0.1c-0.7,0.1-1.4,0.1-2.1,0.1c-0.7,0-1.3,0-1.9,0c-1,0-1.9-0.1-2.8-0.2c-0.9-0.1-1.8-0.4-2.5-0.8c-0.7-0.4-1.3-1-1.8-1.8c-0.4-0.8-0.7-1.8-0.7-3.1c0-0.5,0-1,0.1-1.7c0.1-0.7,0.2-1.5,0.4-2.3L208,48h-4.5L204.3,44.1z"/>
+    <path fill="#FFFFFF" d="M228.5,46.2c2-1,4-1.7,6.1-2.1c2.1-0.4,4.4-0.7,6.9-0.7c2.5,0,4.5,0.2,6.1,0.6c1.6,0.4,2.9,0.9,3.9,1.7c1,0.7,1.6,1.6,2,2.6c0.4,1,0.6,2.1,0.6,3.4c0,0.7,0,1.5-0.1,2.4c-0.1,0.9-0.2,1.6-0.3,2.1L250.9,69h-9.3l-1-3.7h-0.3c-1.2,1.4-2.7,2.4-4.3,3.1c-1.6,0.7-3.3,1.1-4.9,1.1c-0.9,0-1.8-0.1-2.7-0.4s-1.7-0.7-2.4-1.2c-0.7-0.6-1.3-1.3-1.7-2.1c-0.4-0.9-0.6-1.9-0.6-3.2c0-2,0.6-3.6,1.7-4.8c1.1-1.2,2.6-2.1,4.3-2.7s3.8-1,6.1-1.1c2.3-0.2,4.5-0.2,6.8-0.2c0.1-0.4,0.2-0.9,0.3-1.7c0.1-0.7,0.2-1.3,0.2-1.9c0-0.7-0.2-1.3-0.5-1.9c-0.4-0.6-1.1-0.9-2.3-0.9c-1.4,0-2.3,0.4-3,1.2c-0.6,0.8-1.1,1.7-1.2,2.9h-8.5L228.5,46.2z M241.8,56.4h-1c-1.1,0-2.1,0.1-2.9,0.4c-0.8,0.3-1.4,0.7-1.9,1.1c-0.5,0.5-0.8,1-1.1,1.6c-0.2,0.6-0.3,1.2-0.3,1.7c0,0.9,0.2,1.6,0.7,2.1c0.5,0.5,1.1,0.7,1.7,0.7c0.8,0,1.6-0.3,2.4-0.9c0.8-0.6,1.3-1.4,1.5-2.3L241.8,56.4z"/>
+  </g>
+</svg>
+  <div class="searchFieldWrapper">
+    <input type="" name="" placeholder="As melhores pautas e notícias corporativas. O que você procura?" id="searchInput">
+    <div class="searchResultsWrapper" id="searchDialogBox">
+      <span class="searchResultName">Sua busca: <strong>Samsung</strong></span>
+      <div class="searchResultsLines">
+        <button class="searchResultsBtn">
+          <amp-img src="img/id-card.svg" width="36" height="36" layout="responsive" alt=""></amp-img>
+          <span>VER QUEM ATENDE</span>
+        </button>
+        <button class="searchResultsBtn">
+          <amp-img src="img/file-plus.svg" width="36" height="36" layout="responsive" alt=""></amp-img>
+          <span>VER CONTEÚDOS</span>
+        </button>
+      </div>
+      <div class="searchResultsLines">
+        <amp-img src="img/clock.svg" width="36" height="36" layout="responsive" alt=""></amp-img>
+        <span class="lastContentTitle">ÚLTIMOS CONTEÚDOS</span>
+        <amp-img src="img/angle-down.svg" width="36" height="36" layout="responsive" alt=""></amp-img>
+      </div>
+      <div class="lastContentListWrapper">
+        <ul>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+          <li class="lastContentLine">
+            <button>
+              <span class="lastContentLineTitle">
+                12/12/2018 &#x1F784; Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button id="searchBtn" on="tap:searchDialogBox.toggleVisibility">
+      <amp-img src="img/lupa.svg" width="36" height="36" layout="responsive" alt=""></amp-img>
+    </button>
+  </div>
+  <div class="loginWrapper">
+    <button class="loginBtn" on="tap:anim1Login.start">
+      <amp-img src="img/sign-in.svg" width="20" height="20" layout="responsive" alt=""></amp-img>
+      <span>LOGIN</span>
+      <!-- dropdown login -->
+      <div class="loginDropdownWrapper" id="dropDownLogin">
+        <span>ACESSO PARA JORNALISTAS</span>
+      </div>
+      <!-- final dropdown login -->
+    </button>
+  </div>
+    <button class="configBtn">
+      <amp-img src="img/cog.svg" width="20" height="20" layout="responsive" alt=""></amp-img>
+      <!-- dropdown login -->
+      <div class="configDropdownWrapper" id="dropDownConfig">
+        <span>CONFIGURAÇÕES</span>
+      </div>
+      <!-- final dropdown login -->
+    </button>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="totalFiltersContainer">
+  <div class="headerFiltersWrapper">
+    <H3>FILTRE OS CONTEÚDOS</H3>
+    <div class="filterItem1Wrapper">
+      <h4>TECNOLOGIA</h4>
+      <input type="checkbox" id="switch1" /><label id="filterItem1" for="switch1">Toggle</label>
+    </div>
+    <div class="filterItem2Wrapper">
+      <h4>ECONOMIA</h4>
+      <input type="checkbox" id="switch2" /><label id="filterItem2" for="switch2">Toggle</label>
+    </div>
+    <div class="filterItem3Wrapper">
+      <h4>COMPORTAMENTO</h4>
+      <input type="checkbox" id="switch4" /><label id="filterItem4" for="switch4">Toggle</label>
+    </div>
+    <div class="filterItem4Wrapper">
+      <h4>SAÚDE</h4>
+      <input type="checkbox" id="switch3" /><label id="filterItem3" for="switch3">Toggle</label>
+    </div>
+    <div class="filterItem5Wrapper">
+      <h4>LANÇAMENTOS</h4>
+      <input type="checkbox" id="switch5" /><label id="filterItem5" for="switch5">Toggle</label>
+    </div>
+    <div class="filterItem6Wrapper">
+      <h4>EVENTOS</h4>
+      <input type="checkbox" id="switch6" /><label id="filterItem6" for="switch6">Toggle</label>
+    </div>
+    <div class="filterItem7Wrapper">
+      <h4>ARTIGOS</h4>
+      <input type="checkbox" id="switch7" /><label id="filterItem7" for="switch7">Toggle</label>
+    </div>
+  </div>
+  <button class="releasesBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-8c-6.627 0-12 5.373-12 12v52H128V12c0-6.627-5.373-12-12-12h-8c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zM48 96h352c8.822 0 16 7.178 16 16v48H32v-48c0-8.822 7.178-16 16-16zm352 384H48c-8.822 0-16-7.178-16-16V192h384v272c0 8.822-7.178 16-16 16zm-66.467-194.937l-134.791 133.71c-4.7 4.663-12.288 4.642-16.963-.046l-67.358-67.552c-4.683-4.697-4.672-12.301.024-16.985l8.505-8.48c4.697-4.683 12.301-4.672 16.984.024l50.442 50.587 117.782-116.837c4.709-4.671 12.313-4.641 16.985.068l8.458 8.527c4.672 4.709 4.641 12.313-.068 16.984z"/></svg>
+    <span>MOSTRAR RELEASES DE HOJE</span>
+  </button>
+</div> -->
+  
+
+
+
+
+
+
+
+
+
+<h1 class="jobTypeTitle" id="TypeTitle">Informe sua profissão:</h1>
+
+
+
+
+
+
+
+
+
+
+
+<div class="registerTypeWrapper" id="typeModal">
+  <button class="registerType1" on="tap:typeModal.toggleVisibility,TypeTitle.toggleVisibility,registerModal.toggleClass(class='registerWrapperOn')">
+    <svg id="micSvg"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 215 215"xml:space="preserve"><circle fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" cx="156.8" cy="58.2" r="29.6"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" d="M159.5,80.6c2.1-0.3,4.1-0.8,6.1-1.6"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" d="M140.9,74.1c3.9,3.9,8.9,6.1,13.9,6.5"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" d="M172.7,42.3c-6.9-6.9-17.3-8.4-25.7-4.4"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="176.6" y1="80.1" x2="134.9" y2="38.3"/><rect x="79.7" y="71.9" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 134.1825 248.309)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" width="77.7" height="48.8"/><rect x="79.8" y="80.3" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 134.467 248.1912)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" width="77.7" height="31.8"/><rect x="97.3" y="89.1" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 134.6203 248.9636)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" width="43.2" height="15"/><polyline fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" points="112,124.4 42,186.3 28.7,173 90.5,102.9 "/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="70.1" y1="151.8" x2="63.8" y2="157.5"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="96.4" y1="128.4" x2="75.4" y2="147.1"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="58.7" y1="171.5" x2="43.5" y2="156.3"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="52.7" y1="176.8" x2="38.1" y2="162.2"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="83.1" y1="52.3" x2="82.9" y2="38"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="60.2" y1="62" x2="50.1" y2="51.9"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="51.2" y1="85.2" x2="35.8" y2="85.2"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="162.6" y1="131.9" x2="177" y2="132.1"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="152.9" y1="154.7" x2="163.1" y2="164.9"/><line fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" stroke-miterlimit="10" x1="129.7" y1="163.8" x2="129.7" y2="179.1"/></svg>
+    <span>JORNALISTA</span>
+  </button>
+  <button class="registerType2" on="tap:typeModal.toggleVisibility,TypeTitle.toggleVisibility,registerModal.toggleClass(class='registerWrapperOn')">
+    <svg id="bullhornSvg"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 215 215"xml:space="preserve"><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="183.3" y1="70.5" x2="193.6" y2="60.5"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="192.6" y1="93.5" x2="206.9" y2="93.5"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="182.6" y1="116.3" x2="193.4" y2="127.2"/><rect x="150.1" y="43.8" fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" width="16.5" height="100.8"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="158.3" y1="44.3" x2="158.3" y2="52.2"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="158.3" y1="137.3" x2="158.3" y2="145.1"/><polygon fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" points="84.1,117.7 150.1,139 150.1,49.5 84.1,69.7   "/><rect x="24.9" y="70.3" fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" width="59.2" height="48"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="17.9" y1="72.7" x2="17.9" y2="115.8"/><rect x="8.1" y="79.3" fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" width="9.8" height="30"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="109.6" y1="75.1" x2="102.4" y2="77.5"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="137.4" y1="65.7" x2="115.3" y2="73.1"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="36.1" y1="88.7" x2="36.1" y2="93"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="36.1" y1="70.3" x2="36.1" y2="84.4"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="46.5" y1="88.7" x2="46.5" y2="93"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="46.5" y1="70.3" x2="46.5" y2="84.4"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="57" y1="88.7" x2="57" y2="93"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="57" y1="70.3" x2="57" y2="84.4"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="74.4" y1="111.2" x2="74.4" y2="118.3"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="74.4" y1="82.8" x2="74.4" y2="104.9"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="74.4" y1="70.3" x2="74.4" y2="78.1"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="34.3" y1="108.4" x2="59.1" y2="108.4"/><polyline fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" points="69.6,118.3 69.6,126 57,126 74.4,171.1 51.5,171.1 47.5,161.2 33,125.3 26.6,125.3"/><line fill="none" stroke="#fff" stroke-width="3" stroke-miterlimit="10" x1="61.3" y1="161.1" x2="47.5" y2="161.2"/></svg>
+    <span>PR</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="contentContainer"> -->
+<div class="registerWrapper" id="registerModal">
+  <span>REGISTRE-SE NO MAXPRESS CONNECTA</span>
+  <input class="inputs" type="text" name="inputName" placeholder="Nome Completo">
+  <input class="inputs" type="text" name="inputEmail" placeholder="E-mail">
+  <input class="inputs" type="text" name="inputTel" placeholder="Telefone">
+  <input class="inputs" type="password" name="inputPass" placeholder="Senha">
+  <input class="inputs" type="password" name="inputPassA" placeholder="Confirmar Senha">
+  <button>RECEBER CÓDIGO DE ACESSO</button>
+</div>
+  <!-- </div> -->
+
+
+
+
+
+
+
+
+<div class="warningDialogBox">
+  <button class="WarningCloseBtn">
+    <svg class="closeWarningSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg>
+  </button>
+  <div class="warningWrapper">
+    <svg class="warningSvg" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M270.2 160h35.5c3.4 0 6.1 2.8 6 6.2l-7.5 196c-.1 3.2-2.8 5.8-6 5.8h-20.5c-3.2 0-5.9-2.5-6-5.8l-7.5-196c-.1-3.4 2.6-6.2 6-6.2zM288 388c-15.5 0-28 12.5-28 28s12.5 28 28 28 28-12.5 28-28-12.5-28-28-28zm281.5 52L329.6 24c-18.4-32-64.7-32-83.2 0L6.5 440c-18.4 31.9 4.6 72 41.6 72H528c36.8 0 60-40 41.5-72zM528 480H48c-12.3 0-20-13.3-13.9-24l240-416c6.1-10.6 21.6-10.7 27.7 0l240 416c6.2 10.6-1.5 24-13.8 24z"/></svg>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</span>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="dialogBox">
+  <button class="dialogBoxCloseBtn">
+    <svg class="closecheckSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg>
+  </button>
+  <div class="dialogBoxWrapper">
+    <svg class="checkSvg" width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z"/></svg>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- scroll to top -->
+<h3 class="target">
+  <!-- This is the target. -->
+  <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay"></amp-position-observer>
+</h3>
+<!-- final scroll to top -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="footerContainer">
+    <ul>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="comoFunciona.html">Como funciona o Maxpress Connecta</a>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="">Fale conosco</a>
+      </li>
+<!--       <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="">Max anúncios</a>
+      </li> -->
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="https://www.i-maxpr.com/">I'Max</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="https://www.i-maxpr.com/newest/login2/login.html#servicos">Serviços</a>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="https://www.i-maxpr.com/newest/login2/login.html#Diferenciais">Diferenciais</a>
+      </li>
+      <li>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#fff" stroke-width="3.5" stroke-miterlimit="10" d="M25.948,13.618l33.073,0c2.289,0,4.183,2.11,4.183,4.689l0.002,53.075l-16.675-17.91L30.117,71.378V18.307C30.117,15.728,28.237,13.618,25.948,13.618c-2.287,0-4.153,2.11-4.153,4.689v11.659h3.906"/></svg>
+        <a href="https://www.i-maxpr.com/newest/login2/login.html#recursos">Recursos</a>
+      </li>
+    </ul>
+    <form>
+      <input type="" name="" placeholder="Nome Completo">
+      <input type="" name="" placeholder="e-mail">
+      <textarea placeholder="Mensagem"></textarea>
+      <button>Enviar</button>
+    </form>
+    <p>*O Portal Maxpress Connecta, braço do I'Max, publica pautas, notas e notícias de clientes, a quem cabe toda e qualquer responsabilidade pelas informações nelas contidas, e pelos direitos eventuais de autoria e de imagem.</p>
+    <p>Copyright© 2019 Maxetron. Todos os direitos reservados. All rights reserved</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- scroll to top -->
+<amp-animation id="showAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#scrollToTopButton",
+        "keyframes": [{
+          "opacity": "1",
+          "visibility": "visible"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="hideAnim"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": "#scrollToTopButton",
+        "keyframes": [{
+          "opacity": "0",
+          "visibility": "hidden"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<button id="scrollToTopButton" on="tap:top.scrollTo(duration=200)" class="scrollToTop">
+    <amp-img class="arrowUpSvg" src="img/angle-up.svg" width="20" height="20" layout="responsive" alt=""></amp-img>
+  </button>
+<!-- final scroll to top -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- login window -->
+<div class="loginModalBg">
+  
+<div class="loginModal">
+    <button on="tap:anim2Login.start" class="loginModalCloseBtn"><svg class="loginModalCloseSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg></button>
+  <span>LOGIN</span>
+  <input type="" name="" placeholder="e-mail">
+  <input type="" name="" placeholder="senha">
+  <button class="loginEntrarBtn">ENTRAR</button>
+  <a href="">Esqueci minha senha</a>
+  <span>Não tem uma conta?<a href="registrar.html" target="blank_">Registre-se</a></span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button on="tap:anim1.start" class="quemAtendeBtn">
+    <svg class="quemAtendeSvg2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M27.617,52.068v-7.117c0-3.916,2.834-5.362,6.48-5.362l4.483,4.936l4.159-4.936c3.648,0,6.799,1.446,6.799,5.362v7.117"/><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-miterlimit="10" d="M43.926,30.014c0,2.986-2.407,5.43-5.349,5.43c-2.94,0-5.347-2.443-5.347-5.43v-2.011c0-2.986,2.406-5.43,5.347-5.43c2.941,0,5.349,2.443,5.349,5.43V30.014z"/><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-miterlimit="10" d="M55.064,22.159c9.107,9.106,9.107,23.869,0,32.976c-9.105,9.105-23.868,9.105-32.975-0.002c-9.104-9.104-9.106-23.866,0-32.973C31.196,13.054,45.961,13.055,55.064,22.159z"/><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-miterlimit="10" d="M57.23,52.626L68.926,64.32c1.15,1.15,1.072,3.112-0.174,4.359c-1.248,1.247-3.209,1.325-4.359,0.175l-8.365-8.364"/></svg>
+    <svg class="quemAtendeSvg1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="85px" height="85px" viewBox="0 0 85 85" enable-background="new 0 0 85 85" xml:space="preserve"><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" d="M31.132,48.592c0,0,12.874,0.16,28.581,12.197V17.564c-14.43,12.035-28.581,12.198-28.581,12.198"/><polyline fill="none" stroke="#354A54" stroke-width="2.5" stroke-linejoin="round" stroke-miterlimit="10" points="13.804,48.883 21.91,67.436 30.738,67.436 25.961,49.266"/><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-miterlimit="10" d="M67.549,30.248c2.193,2.334,3.537,5.477,3.537,8.933c0,3.486-1.367,6.653-3.596,8.993"/><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-miterlimit="10" d="M72.879,25.338c3.385,3.626,5.455,8.492,5.455,13.843c0,5.347-2.068,10.21-5.447,13.835"/><path fill="none" stroke="#354A54" stroke-width="2.5" stroke-miterlimit="10" d="M16.667,29.275c-5.5,0-10,4.455-10,9.901s4.5,9.901,10,9.901h9.374V29.275H16.667z"/></svg>
+  <H3 class="quemAtendeBtnTitle">QUEM ATENDE</H3>
+</button>
+
+
+
+  <div class="quemAtendeWindow">
+    <button on="tap:anim2.start" class="quemAtendeWindowCloseBtn"><svg class="quemAtendeWindowCloseSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"/></svg></button>
+    <p class="quemAtendeLead">Digite o nome da empresa e veja os contatos dos assessoria de imprensa e RPs</p>
+    <div class="quemAtendeSearchInputWrapper">
+      <input class="quemAtendeSearchInput" type="text" placeholder="Buscar atendimento...">
+      <button class="quemAtendeSearchBtn">BUSCAR</button>
+    </div>
+    <div class="quemAtendeResultadoWrapper">
+      <p class="quemAtendeLead"><strong>CONTATO ENCONTRADO!</strong></BR>Para acessar as informações de contato faça o login</p>
+      <div class="quemAtendeSearchInputWrapper">
+        <input class="quemAtendeSearchInput" type="text" placeholder="E-mail">
+        <input class="quemAtendeSearchInput1" type="text" placeholder="Senha">
+        <button class="quemAtendeSearchBtn">LOGIN</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<amp-animation id="anim1"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "easing": "ease-in-out",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": ".quemAtendeWindow",
+        "keyframes": [
+          {"visibility": "hidden", "opacity": 0, "transform": "translateY(100vh)"},
+          {"visibility": "visible", "opacity": 1, "transform": "translateY(0vh)"}
+        ]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="anim2"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "easing": "ease-in-out",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": ".quemAtendeWindow",
+        "keyframes": [
+          {"visibility": "visible", "opacity": 1, "transform": "translateY(0vh)"},
+          {"visibility": "hidden", "opacity": 0, "transform": "translateY(100vh)"}
+        ]
+      }]
+    }
+  </script>
+</amp-animation>
+
+
+
+
+
+<amp-animation id="anim1Login"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "easing": "ease-in-out",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": ".loginModalBg",
+        "keyframes": [
+          {"visibility": "hidden", "opacity": 0},
+          {"visibility": "visible", "opacity": 1}
+        ]
+      }]
+    }
+  </script>
+</amp-animation>
+
+<amp-animation id="anim2Login"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "200ms",
+      "fill": "both",
+      "easing": "ease-in-out",
+      "iterations": "1",
+      "direction": "alternate",
+      "animations": [{
+        "selector": ".loginModalBg",
+        "keyframes": [
+          {"visibility": "visible", "opacity": 1},
+          {"visibility": "hidden", "opacity": 0}
+        ]
+      }]
+    }
+  </script>
+</amp-animation>
+
+
+
+
+<script type="text/javascript">
+
+var fullContainer = document.querySelector('.fullContainer');
+
+function blurOn() {
+    fullContainer.style.transition = '200ms ease all';
+    fullContainer.style.filter = 'blur(10px)';
+    console.log('modal ON');
+}
+
+function blurOff() {
+    fullContainer.style.filter = 'blur(0px)';
+    console.log('modal OFF');
+}
+
+var quemAtendeBtn = document.querySelector('.quemAtendeBtn').addEventListener('click', blurOn);
+
+var quemAtendeWindowCloseBtn = document.querySelector('.quemAtendeWindowCloseBtn').addEventListener('click', blurOff);
+
+var loginBtn = document.querySelector('.loginBtn').addEventListener('click', blurOn);
+
+var loginModalCloseBtn = document.querySelector('.loginModalCloseBtn').addEventListener('click', blurOff);
+
+// var searchResultsWrapper = document.querySelector('.searchResultsWrapper');
+
+// var searchBtn = document.querySelector('#searchBtn').addEventListener('click', function() {
+//   if(searchResultsWrapper.style.display === 'none') {
+//     searchResultsWrapper.style.display = 'grid';
+//   } else {
+//     searchResultsWrapper.style.display = 'none';
+//   }
+// });
+
+
+
+var WarningCloseBtn = document.querySelector('.WarningCloseBtn').addEventListener('click', function() {
+  document.querySelector('.warningDialogBox').style.display = 'none';
+});
+
+var dialogBoxCloseBtn = document.querySelector('.dialogBoxCloseBtn').addEventListener('click', function() {
+  document.querySelector('.dialogBox').style.display = 'none';
+});
+
+</script>
+
+
+
+  </body>
+
+
+</html>
+
+
